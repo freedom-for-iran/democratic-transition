@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International Appeal for Democratic Transition in Iran</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕊️</text></svg>">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #0a1a2f 0%, #1a2f4a 50%, #2a3f5f 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .main-card {
+      max-width: 1300px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(200, 220, 255, 0.2);
+      border-radius: 2.5rem;
+      padding: 2rem;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: white;
+      text-align: center;
+      margin-bottom: 0.3rem;
+      text-shadow: 0 4px 15px #00000080;
+      letter-spacing: -0.02em;
+    }
+    .subhead {
+      color: #b8d9ff;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 300;
+      border-bottom: 1px solid #4a7db0;
+      padding-bottom: 1rem;
+    }
+    .tab-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .tab {
+      background: rgba(20, 40, 60, 0.8);
+      border: 1px solid #5a8fc9;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 3rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .tab:hover {
+      background: #2b5ca0;
+      border-color: #ffd966;
+      transform: scale(1.02);
+    }
+    .tab.active {
+      background: #3a6cb0;
+      border-color: #ffd966;
+      box-shadow: 0 0 15px #9ac7ff;
+    }
+    .page {
+      display: none;
+    }
+    .page.active-page {
+      display: block;
+    }
+    .country-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1rem 1.5rem;
+      border-radius: 3rem;
+      border: 1px solid #5a8fc9;
+    }
+    .country-flag {
+      font-size: 2.5rem;
+    }
+    .country-name {
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    .recipient-box {
+      background: rgba(20, 40, 60, 0.8);
+      border-radius: 2rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #5a8fc9;
+    }
+    .label {
+      color: #b8d9ff;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .emails {
+      color: #f0f4ff;
+      font-size: 0.95rem;
+      word-break: break-word;
+      background: #0a1f33;
+      padding: 1rem 1.5rem;
+      border-radius: 2rem;
+      border: 1px solid #6a9fe0;
+      line-height: 1.6;
+    }
+    .points-list {
+      margin: 1rem 0;
+      padding-left: 1rem;
+    }
+    .point-item {
+      color: #ffd966;
+      font-size: 1rem;
+      margin: 0.8rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    .point-number {
+      background: #ffd966;
+      color: #0a1f33;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .point-text {
+      color: white;
+      line-height: 1.5;
+    }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.8rem 0;
+    }
+    .btn {
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: white;
+      box-shadow: 0 8px 20px black;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      flex: 1 1 auto;
+      transition: 0.2s;
+    }
+    .mobile {
+      background: #1e7e44;
+    }
+    .mobile:hover {
+      background: #2e9e5c;
+    }
+    .web {
+      background: #1f4a8a;
+    }
+    .web:hover {
+      background: #2e63b0;
+    }
+    .copy-section {
+      background: rgba(10, 25, 40, 0.7);
+      border-radius: 2rem;
+      padding: 1.8rem;
+      margin: 1.8rem 0;
+      border: 1px solid #5a8fc9;
+    }
+    .copy-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .copy-btn {
+      background: #1a3350;
+      border: 1px solid #7aafe0;
+      padding: 0.8rem 1.8rem;
+      border-radius: 3rem;
+      color: white;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .copy-btn:hover {
+      background: #2a4a70;
+    }
+    .success-msg {
+      background: #1e7e44;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 100px;
+      margin-top: 1rem;
+      animation: fade 2s forwards;
+    }
+    @keyframes fade {
+      0% { opacity: 1; }
+      70% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    .subject-display {
+      color: white;
+      background: #0a1f33;
+      padding: 0.8rem 1.5rem;
+      border-radius: 2rem;
+      margin-bottom: 1rem;
+      border: 1px solid #6a9fe0;
+      word-break: break-word;
+    }
+    .body-preview {
+      background: #0a1a2a;
+      color: #f0f8ff;
+      padding: 1.5rem;
+      border-radius: 1.8rem;
+      white-space: pre-wrap;
+      font-size: 0.95rem;
+      border: 1px solid #6a9fe0;
+      max-height: 500px;
+      overflow-y: auto;
+      line-height: 1.6;
+    }
+    .footer-note {
+      text-align: center;
+      color: #b8d9ff;
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      border-top: 1px solid #4a7db0;
+      padding-top: 1rem;
+    }
+    .mobile-note {
+      background: #0a1f33;
+      color: #ffd966;
+      padding: 0.8rem;
+      border-radius: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      border: 1px solid #5a8fc9;
+    }
+    .hidden {
+      display: none;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      .tab { padding: 0.6rem 0.8rem; font-size: 0.85rem; }
+      .btn { padding: 0.8rem 1rem; font-size: 1rem; }
+      .country-name { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-card">
+    <h1>🕊️ International Appeal for Democratic Transition in Iran</h1>
+    <div class="subhead">Choose a country/organization to send your message</div>
+
+    <!-- Mobile helper note -->
+    <div class="mobile-note">
+      📱 <strong>Mobile:</strong> Tap green button → choose mail app → all addresses will be in "To" field
+    </div>
+
+    <!-- Tab Bar with Flags -->
+    <div class="tab-bar">
+      <div class="tab active" data-page="germany">🇩🇪 Germany</div>
+      <div class="tab" data-page="france">🇫🇷 France</div>
+      <div class="tab" data-page="uk">🇬🇧 UK</div>
+      <div class="tab" data-page="canada">🇨🇦 Canada</div>
+      <div class="tab" data-page="netherlands">🇳🇱 Netherlands</div>
+      <div class="tab" data-page="sweden">🇸🇪 Sweden</div>
+      <div class="tab" data-page="usa">🇺🇸 USA</div>
+      <div class="tab" data-page="eu">🇪🇺 EU</div>
+      <div class="tab" data-page="humanrights">🤝 Human Rights</div>
+      <div class="tab" data-page="media">📺 Media</div>
+    </div>
+
+    <!-- GERMANY -->
+    <div id="page-germany" class="page active-page">
+      <div class="country-header">
+        <span class="country-flag">🇩🇪</span>
+        <span class="country-name">Germany – Federal Foreign Office</span>
+      </div>
+      <div class="recipient-box">
+        <div class="label">📬 Send to:</div>
+        <div class="emails" id="germany-emails">buergerdialog@auswaertiges-amt.de; poststelle@auswaertiges-amt.de; menschenrechte@auswaertiges-amt.de; presse@auswaertiges-amt.de</div>
+      </div>
+      
+      <div class="btn-group">
+        <button class="btn mobile" onclick="sendMobile('germany')">📱 Open in Mail App</button>
+        <button class="btn web" onclick="sendWeb('germany')">🌐 Gmail Web</button>
+      </div>
+
+      <div class="copy-section">
+        <div class="label">📋 Copy Options:</div>
+        <div class="copy-row">
+          <button class="copy-btn" onclick="copyContent('germany', 'addresses')">📧 Copy Addresses</button>
+          <button class="copy-btn" onclick="copyContent('germany', 'subject')">📌 Copy Subject</button>
+          <button class="copy-btn" onclick="copyContent('germany', 'body')">📄 Copy Full Email</button>
+        </div>
+        <div id="success-germany" style="min-height: 2.5rem;"></div>
+        
+        <div class="label">Subject:</div>
+        <div class="subject-display" id="germany-subject">Iran: Urgent Appeal Regarding Democratic Transition and Human Rights</div>
+        
+        <div class="label">Email Body:</div>
+        <div class="body-preview" id="germany-body">
+Dear Distinguished Representatives of the Federal Foreign Office and German Political Leaders,
+
+In recent weeks, global attention has once again focused on Iran and the aspirations of its people. In January 2026, millions of citizens took to the streets to demand freedom, popular sovereignty, and a better future for their country. Despite severe repression and the tragic loss of thousands of lives, these courageous men and women continue to stand resolutely for liberation and an end to the authoritarian rule of the Islamic Republic. Their message is clear: Iranians seek a democratic system grounded in liberty, the rule of law, and respect for fundamental human rights.
+
+Across Iran and within the global Iranian diaspora, there is growing consensus that the country's future must be determined by its people, anchored in human rights, democratic governance, and the preservation of Iran's territorial integrity. Following the escalation of conflict on 28 February, urgent concerns have arisen regarding civilian safety, the nation's political future, territorial unity, and regional stability.
+
+In this context, the name of Reza Pahlavi has gained prominence across Iran and at protest gatherings worldwide. In recent years, he has emerged as the most widely recognized figure within the Iranian opposition, viewed by millions as a potential unifying leader during a transitional period toward democracy.
+
+Many Iranians, both inside the country and across the diaspora, look to the German government and international institutions to:
+
+1. Respect the Iranian people's right to determine their political future.
+2. Recognize Reza Pahlavi as a potential transitional leader guiding Iran toward democratic governance.
+3. Protect civilians and prevent further harm amid ongoing conflict.
+4. Support a free, internationally supervised referendum following the Islamic Republic's end, enabling Iranians to choose their system of government.
+5. Uphold human rights and fundamental freedoms.
+6. Preserve Iran's national unity and territorial integrity, discouraging separatism that could destabilize the country and region.
+7. Ensure conditions for Iranians to freely and peacefully decide their nation's future.
+
+Ultimately, Iran's future must be determined by its people through free, democratic, and transparent processes. The international community has a vital role in ensuring that the voices of millions of Iranians seeking freedom, dignity, and democracy are heard and respected.
+
+Respectfully,
+
+[Your Name & Surname – City]
+        </div>
+      </div>
+    </div>
+
+    <!-- FRANCE -->
+    <div id="page-france" class="page">
+      <div class="country-header">
+        <span class="country-flag">🇫🇷</span>
+        <span class="country-name">France – Ministry for Europe and Foreign Affairs</span>
+      </div>
+      <div class="recipient-box">
+        <div class="label">📬 Send to:</div>
+        <div class="emails" id="france-emails">ministre@diplomatie.gouv.fr; presse.dcp@diplomatie.gouv.fr; courrier.cabinet@diplomatie.gouv.fr; presse@diplomatie.gouv.fr; communication.dcp@diplomatie.gouv.fr</div>
+      </div>
+      
+      <div class="btn-group">
+        <button class="btn mobile" onclick="sendMobile('france')">📱 Open in Mail App</button>
+        <button class="btn web" onclick="sendWeb('france')">🌐 Gmail Web</button>
+      </div>
+
+      <div class="copy-section">
+        <div class="label">📋 Copy Options:</div>
+        <div class="copy-row">
+          <button class="copy-btn" onclick="copyContent('france', 'addresses')">📧 Copy Addresses</button>
+          <button class="copy-btn" onclick="copyContent('france', 'subject')">📌 Copy Subject</button>
+          <button class="copy-btn" onclick="copyContent('france', 'body')">📄 Copy Full Email</button>
+        </div>
+        <div id="success-france" style="min-height: 2.5rem;"></div>
+        
+        <div class="label">Subject (French):</div>
+        <div class="subject-display" id="france-subject">Appel urgent concernant l'avenir démocratique de l'Iran et la protection des droits de l'homme</div>
+        
+        <div class="label">Email Body (French):</div>
+        <div class="body-preview" id="france-body">
+Dear Minister, Distinguished Political Leaders, and Representatives of the French Republic,
+
+In recent weeks, global attention has once again focused on Iran and the aspirations of its people. In January 2026, millions of citizens took to the streets to demand freedom, popular sovereignty, and a better future for their country. Despite severe repression and the tragic loss of thousands of lives, these courageous men and women continue to stand resolutely for liberation and an end to the authoritarian rule of the Islamic Republic. Their message is clear: Iranians seek a democratic system grounded in liberty, the rule of law, and respect for fundamental human rights.
+
+Across Iran and within the global Iranian diaspora, there is growing consensus that the country's future must be determined by its people, anchored in human rights, democratic governance, and the preservation of Iran's territorial integrity. Following the escalation of conflict on 28 February, urgent concerns have arisen regarding civilian safety, the nation's political future, territorial unity, and regional stability.
+
+In this context, the name of Reza Pahlavi has gained prominence across Iran and at protest gatherings worldwide. In recent years, he has emerged as the most widely recognized figure within the Iranian opposition, viewed by millions as a potential unifying leader during a transitional period toward democracy.
+
+Many Iranians, both inside the country and across the diaspora, look to the French government and international institutions to:
+
+1. Respect the Iranian people's right to determine their political future.
+2. Recognize Reza Pahlavi as a potential transitional leader guiding Iran toward democratic governance.
+3. Protect civilians and prevent further harm amid ongoing conflict.
+4. Support a free, internationally supervised referendum following the Islamic Republic's end, enabling Iranians to choose their system of government.
+5. Uphold human rights and fundamental freedoms.
+6. Preserve Iran's national unity and territorial integrity, discouraging separatism that could destabilize the country and region.
+7. Ensure conditions for Iranians to freely and peacefully decide their nation's future.
+
+Ultimately, Iran's future must be determined by its people through free, democratic, and transparent processes. The international community has a vital role in ensuring that the voices of millions of Iranians seeking freedom, dignity, and democracy are heard and respected.
+
+Respectfully,
+
+[Your Name & Surname – City]
+        </div>
+      </div>
+    </div>
+
+    <!-- UNITED KINGDOM -->
+    <div id="page-uk" class="page">
+      <div class="country-header">
+        <span class="country-flag">🇬🇧</span>
+        <span class="country-name">United Kingdom – Foreign, Commonwealth & Development Office</span>
+      </div>
+      <div class="recipient-box">
+        <div class="label">📬 Send to:</div>
+        <div class="emails" id="uk-emails">fcdo.enquiries@fcdo.gov.uk; public.enquiries@fcdo.gov.uk; fcdo.correspondence@fcdo.gov.uk; fcdo.press@fcdo.gov.uk</div>
+      </div>
+      
+      <div class="btn-group">
+        <button class="btn mobile" onclick="sendMobile('uk')">📱 Open in Mail App</button>
+        <button class="btn web" onclick="sendWeb('uk')">🌐 Gmail Web</button>
+      </div>
+
+      <div class="copy-section">
+        <div class="label">📋 Copy Options:</div>
+        <div class="copy-row">
+          <button class="copy-btn" onclick="copyContent('uk', 'addresses')">📧 Copy Addresses</button>
+          <button class="copy-btn" onclick="copyContent('uk', 'subject')">📌 Copy Subject</button>
+          <button class="copy-btn" onclick="copyContent('uk', 'body')">📄 Copy Full Email</button>
+        </div>
+        <div id="success-uk" style="min-height: 2.5rem;"></div>
+        
+        <div class="label">Subject:</div>
+        <div class="subject-display" id="uk-subject">Formal Representation: Supporting the Democratic Aspirations of the Iranian People</div>
+        
+        <div class="label">Email Body:</div>
+        <div class="body-preview" id="uk-body">
+Dear Representatives of the Foreign, Commonwealth & Development Office and UK Political Leaders,
+
+In recent weeks, global attention has once again focused on Iran and the aspirations of its people. In January 2026, millions of citizens took to the streets to demand freedom, popular sovereignty, and a better future for their country. Despite severe repression and the tragic loss of thousands of lives, these courageous men and women continue to stand resolutely for liberation and an end to the authoritarian rule of the Islamic Republic. Their message is clear: Iranians seek a democratic system grounded in liberty, the rule of law, and respect for fundamental human rights.
+
+Across Iran and within the global Iranian diaspora, there is growing consensus that the country's future must be determined by its people, anchored in human rights, democratic governance, and the preservation of Iran's territorial integrity. Following the escalation of conflict on 28 February, urgent concerns have arisen regarding civilian safety, the nation's political future, territorial unity, and regional stability.
+
+In this context, the name of Reza Pahlavi has gained prominence across Iran and at protest gatherings worldwide. In recent years, he has emerged as the most widely recognized figure within the Iranian opposition, viewed by millions as a potential unifying leader during a transitional period toward democracy.
+
+Many Iranians, both inside the country and across the diaspora, look to the British government and international institutions to:
+
+1. Respect the Iranian people's right to determine their political future.
+2. Recognize Reza Pahlavi as a potential transitional leader guiding Iran toward democratic governance.
+3. Protect civilians and prevent further harm amid ongoing conflict.
+4. Support a free, internationally supervised referendum following the Islamic Republic's end, enabling Iranians to choose their system of government.
+5. Uphold human rights and fundamental freedoms.
+6. Preserve Iran's national unity and territorial integrity, discouraging separatism that could destabilize the country and region.
+7. Ensure conditions for Iranians to freely and peacefully decide their nation's future.
+
+Ultimately, Iran's future must be determined by its people through free, democratic, and transparent processes. The international community has a vital role in ensuring that the voices of millions of Iranians seeking freedom, dignity, and democracy are heard and respected.
+
+Respectfully,
+
+[Your Name & Surname – City]
+        </div>
+      </div>
+    </div>
+
+    <!-- CANADA -->
+    <div id="page-canada" class="page">
+      <div class="country-header">
+        <span class="country-flag">🇨🇦</span>
+        <span class="country-name">Canada – Global Affairs Canada</span>
+      </div>
+      <div class="recipient-box">
+        <div class="label">📬 Send to:</div>
+        <div class="emails" id="canada-emails">minister@international.gc.ca; media@international.gc.ca</div>
+      </div>
+      
+      <div class="btn-group">
+        <button class="btn mobile" onclick="sendMobile('canada')">📱 Open in Mail App</button>
+        <button class="btn web" onclick="sendWeb('canada')">🌐 Gmail Web</button>
+      </div>
+
+      <div class="copy-section">
+        <div class="label">📋 Copy Options:</div>
+        <div class="copy-row">
+          <button class="copy-btn" onclick="copyContent('canada', 'addresses')">📧 Copy Addresses</button>
+          <button class="copy-btn" onclick="copyContent('canada', 'subject')">📌 Copy Subject</button>
+          <button class="copy-btn" onclick="copyContent('canada', 'body')">📄 Copy Full Email</button>
+        </div>
+        <div id="success-canada" style="min-height: 2.5rem;"></div>
+        
+        <div class="label">Subject:</div>
+        <div class="subject-display" id="canada-subject">Urgent Briefing: Iran's Path to Democracy and Human Rights Protection</div>
+        
+        <div class="label">Email Body:</div>
+        <div class="body-preview" id="canada-body">
+Dear Minister of Foreign Affairs and Representatives of Global Affairs Canada,
+
+In recent weeks, global attention has once again focused on Iran and the aspirations of its people. In January 2026, millions of citizens took to the streets to demand freedom, popular sovereignty, and a better future for their country. Despite severe repression and the tragic loss of thousands of lives, these courageous men and women continue to stand resolutely for liberation and an end to the authoritarian rule of the Islamic Republic. Their message is clear: Iranians seek a democratic system grounded in liberty, the rule of law, and respect for fundamental human rights.
+
+Across Iran and within the global Iranian diaspora, there is growing consensus that the country's future must be determined by its people, anchored in human rights, democratic governance, and the preservation of Iran's territorial integrity. Following the escalation of conflict on 28 February, urgent concerns have arisen regarding civilian safety, the nation's political future, territorial unity, and regional stability.
+
+In this context, the name of Reza Pahlavi has gained prominence across Iran and at protest gatherings worldwide. In recent years, he has emerged as the most widely recognized figure within the Iranian opposition, viewed by millions as a potential unifying leader during a transitional period toward democracy.
+
+Many Iranians, both inside the country and across the diaspora, look to the Canadian government and international democratic institutions to:
+
+1. Respect the Iranian people's right to determine their political future.
+2. Recognize Reza Pahlavi as a potential transitional leader guiding Iran toward democratic governance.
+3. Protect civilians and prevent further harm amid ongoing conflict.
+4. Support a free, internationally supervised referendum following the Islamic Republic's end, enabling Iranians to choose their system of government.
+5. Uphold human rights and fundamental freedoms.
+6. Preserve Iran's national unity and territorial integrity, discouraging separatism that could destabilize the country and region.
+7. Ensure conditions for Iranians to freely and peacefully decide their nation's future.
+
+Ultimately, Iran's future must be determined by its people through free, democratic, and transparent processes. The international community has a vital role in ensuring that the voices of millions of Iranians seeking freedom, dignity, and democracy are heard and respected.
+
+Respectfully,
+
+[Your Name & Surname – City]
+        </div>
+      </div>
+    </div>
+
+    <!-- NETHERLANDS -->
+    <div id="page-netherlands" class="page">
+      <div class="country-header">
+        <span class="country-flag">🇳🇱</span>
+        <span class="country-name">Netherlands – Ministry of Foreign Affairs</span>
+      </div>
+      <div class="recipient-box">
+        <div class="label">📬 Send to:</div>
+        <div class="emails" id="netherlands-emails">minbuza@minbuza.nl; info@minbuza.nl; dmm@minbuza.nl</div>
+      </div>
+      
+      <div class="btn-group">
+        <button class="btn mobile" onclick="sendMobile('netherlands')">📱 Open in Mail App</button>
+        <button class="btn web" onclick="sendWeb('netherlands')">🌐 Gmail Web</button>
+      </div>
+
+      <div class="copy-section">
+        <div class="label">📋 Copy Options:</div>
+        <div class="copy-row">
+          <button class="copy-btn" onclick="copyContent('netherlands', 'addresses')">📧 Copy Addresses</button>
+          <button class="copy-btn" onclick="copyContent('netherlands', 'subject')">📌 Copy Subject</button>
+          <button class="copy-btn" onclick="copyContent('netherlands', 'body')">📄 Copy Full Email</button>
+        </div>
+        <div id="success-netherlands" style="min-height: 2.5rem;"></div>
+        
+        <div class="label">Subject:</div>
+        <div class="subject-display" id="netherlands-subject">Urgent Appeal: Democratic Transition and Security in Iran</div>
+        
+        <div class="label">Email Body:</div>
+        <div class="body-preview" id="netherlands-body">
+Dear Representatives of the Ministry of Foreign Affairs and Dutch Political Leaders,
+
+In recent weeks, global attention has once again focused on Iran and the aspirations of its people. In January 2026, millions of citizens took to the streets to demand freedom, popular sovereignty, and a better future for their country. Despite severe repression and the tragic loss of thousands of lives, these courageous men and women continue to stand resolutely for liberation and an end to the authoritarian rule of the Islamic Republic. Their message is clear: Iranians seek a democratic system grounded in liberty, the rule of law, and respect for fundamental human rights.
+
+Across Iran and within the global Iranian diaspora, there is growing consensus that the country's future must be determined by its people, anchored in human rights, democratic governance, and the preservation of Iran's territorial integrity. Following the escalation of conflict on 28 February, urgent concerns have arisen regarding civilian safety, the nation's political future, territorial unity, and regional stability.
+
+In this context, the name of Reza Pahlavi has gained prominence across Iran and at protest gatherings worldwide. In recent years, he has emerged as the most widely recognized figure within the Iranian opposition, viewed by millions as a potential unifying leader during a transitional period toward democracy.
+
+Many Iranians, both inside the country and across the diaspora, look to the Netherlands and the broader international community to:
+
+1. Respect the Iranian people's right to determine their political future.
+2. Recognize Reza Pahlavi as a potential transitional leader guiding Iran toward democratic governance.
+3. Protect civilians and prevent further harm amid ongoing conflict.
+4. Support a free, internationally supervised referendum following the Islamic Republic's end, enabling Iranians to choose their system of government.
+5. Uphold human rights and fundamental freedoms.
+6. Preserve Iran's national unity and territorial integrity, discouraging separatism that could destabilize the country and region.
+7. Ensure conditions for Iranians to freely and peacefully decide their nation's future.
+
+Ultimately, Iran's future must be determined by its people through free, democratic, and transparent processes. The international community has a vital role in ensuring that the voices of millions of Iranians seeking freedom, dignity, and democracy are heard and respected.
+
+Respectfully,
+
+[Your Name & Surname – City]
+        </div>
+      </div>
+    </div>
+
+    <!-- SWEDEN -->
+    <div id="page-sweden" class="page">
+      <div class="country-header">
+        <span class="country-flag">🇸🇪</span>
+        <span class="country-name">Sweden – Ministry for Foreign Affairs</span>
+      </div>
+      <div class="recipient-box">
+        <div class="label">📬 Send to:</div>
+        <div class="emails" id="sweden-emails">info.ud@gov.se; registrator@gov.se; ud.pressoffice@gov.se</div>
+      </div>
+      
+      <div class="btn-group">
+        <button class="btn mobile" onclick="sendMobile('sweden')">📱 Open in Mail App</button>
+        <button class="btn web" onclick="sendWeb('sweden')">🌐 Gmail Web</button>
+      </div>
+
+      <div class="copy-section">
+        <div class="label">📋 Copy Options:</div>
+        <div class="copy-row">
+          <button class="copy-btn" onclick="copyContent('sweden', 'addresses')">📧 Copy Addresses</button>
+          <button class="copy-btn" onclick="copyContent('sweden', 'subject')">📌 Copy Subject</button>
+          <button class="copy-btn" onclick="copyContent('sweden', 'body')">📄 Copy Full Email</button>
+        </div>
+        <div id="success-sweden" style="min-height: 2.5rem;"></div>
+        
+        <div class="label">Subject:</div>
+        <div class="subject-display" id="sweden-subject">Iran: Addressing the Humanitarian Crisis and Supporting Democratic Stability</div>
+        
+        <div class="label">Email Body:</div>
+        <div class="body-preview" id="sweden-body">
+Dear Representatives of the Swedish Ministry for Foreign Affairs and Political Leaders,
+
+In recent weeks, global attention has once again focused on Iran and the aspirations of its people. In January 2026, millions of citizens took to the streets to demand freedom, popular sovereignty, and a better future for their country. Despite severe repression and the tragic loss of thousands of lives, these courageous men and women continue to stand resolutely for liberation and an end to the authoritarian rule of the Islamic Republic. Their message is clear: Iranians seek a democratic system grounded in liberty, the rule of law, and respect for fundamental human rights.
+
+Across Iran and within the global Iranian diaspora, there is growing consensus that the country's future must be determined by its people, anchored in human rights, democratic governance, and the preservation of Iran's territorial integrity. Following the escalation of conflict on 28 February, urgent concerns have arisen regarding civilian safety, the nation's political future, territorial unity, and regional stability.
+
+In this context, the name of Reza Pahlavi has gained prominence across Iran and at protest gatherings worldwide. In recent years, he has emerged as the most widely recognized figure within the Iranian opposition, viewed by millions as a potential unifying leader during a transitional period toward democracy.
+
+Many Iranians, both inside the country and across the diaspora, look to the Swedish government and international institutions to:
+
+1. Respect the Iranian people's right to determine their political future.
+2. Recognize Reza Pahlavi as a potential transitional leader guiding Iran toward democratic governance.
+3. Protect civilians and prevent further harm amid ongoing conflict.
+4. Support a free, internationally supervised referendum following the Islamic Republic's end, enabling Iranians to choose their system of government.
+5. Uphold human rights and fundamental freedoms.
+6. Preserve Iran's national unity and territorial integrity, discouraging separatism that could destabilize the country and region.
+7. Ensure conditions for Iranians to freely and peacefully decide their nation's future.
+
+Ultimately, Iran's future must be determined by its people through free, democratic, and transparent processes. The international community has a vital role in ensuring that the voices of millions of Iranians seeking freedom, dignity, and democracy are heard and respected.
+
+Respectfully,
+
+[Your Name & Surname – City]
+        </div>
+      </div>
+    </div>
+
+    <!-- UNITED STATES -->
+    <div id="page-usa" class="page">
+      <div class="country-header">
+        <span class="country-flag">🇺🇸</span>
+        <span class="country-name">United States – Department of State</span>
+      </div>
+      <div class="recipient-box">
+        <div class="label">📬 Send to:</div>
+        <div class="emails" id="usa-emails">iran@state.gov; publicaffairs@state.gov; pa-dl-media@state.gov</div>
+      </div>
+      
+      <div class="btn-group">
+        <button class="btn mobile" onclick="sendMobile('usa')">📱 Open in Mail App</button>
+        <button class="btn web" onclick="sendWeb('usa')">🌐 Gmail Web</button>
+      </div>
+
+      <div class="copy-section">
+        <div class="label">📋 Copy Options:</div>
+        <div class="copy-row">
+          <button class="copy-btn" onclick="copyContent('usa', 'addresses')">📧 Copy Addresses</button>
+          <button class="copy-btn" onclick="copyContent('usa', 'subject')">📌 Copy Subject</button>
+          <button class="copy-btn" onclick="copyContent('usa', 'body')">📄 Copy Full Email</button>
+        </div>
+        <div id="success-usa" style="min-height: 2.5rem;"></div>
+        
+        <div class="label">Subject:</div>
+        <div class="subject-display" id="usa-subject">URGENT: The Iranian People's Call for Democracy and Regional Stability</div>
+        
+        <div class="label">Email Body:</div>
+        <div class="body-preview" id="usa-body">
+Dear Representatives of the U.S. Department of State and Distinguished Leaders,
+
+In recent weeks, global attention has once again focused on Iran and the aspirations of its people. In January 2026, millions of citizens took to the streets to demand freedom, popular sovereignty, and a better future for their country. Despite severe repression and the tragic loss of thousands of lives, these courageous men and women continue to stand resolutely for liberation and an end to the authoritarian rule of the Islamic Republic. Their message is clear: Iranians seek a democratic system grounded in liberty, the rule of law, and respect for fundamental human rights.
+
+Across Iran and within the global Iranian diaspora, there is growing consensus that the country's future must be determined by its people, anchored in human rights, democratic governance, and the preservation of Iran's territorial integrity. Following the escalation of conflict on 28 February, urgent concerns have arisen regarding civilian safety, the nation's political future, territorial unity, and regional stability.
+
+In this context, the name of Reza Pahlavi has gained prominence across Iran and at protest gatherings worldwide. In recent years, he has emerged as the most widely recognized figure within the Iranian opposition, viewed by millions as a potential unifying leader during a transitional period toward democracy.
+
+Many Iranians, both inside the country and across the diaspora, look to the United States and international democratic institutions to:
+
+1. Respect the Iranian people's right to determine their political future.
+2. Recognize Reza Pahlavi as a potential transitional leader guiding Iran toward democratic governance.
+3. Protect civilians and prevent further harm amid ongoing conflict.
+4. Support a free, internationally supervised referendum following the Islamic Republic's end, enabling Iranians to choose their system of government.
+5. Uphold human rights and fundamental freedoms.
+6. Preserve Iran's national unity and territorial integrity, discouraging separatism that could destabilize the country and region.
+7. Ensure conditions for Iranians to freely and peacefully decide their nation's future.
+
+Ultimately, Iran's future must be determined by its people through free, democratic, and transparent processes. The international community has a vital role in ensuring that the voices of millions of Iranians seeking freedom, dignity, and democracy are heard and respected.
+
+Respectfully,
+
+[Your Name & Surname – City]
+        </div>
+      </div>
+    </div>
+
+    <!-- EUROPEAN UNION -->
+    <div id="page-eu" class="page">
+      <div class="country-header">
+        <span class="country-flag">🇪🇺</span>
+        <span class="country-name">European Union Institutions</span>
+      </div>
+      <div class="recipient-box">
+        <div class="label">📬 Send to:</div>
+        <div class="emails" id="eu-emails">eeas@eeas.europa.eu; press@eeas.europa.eu; eeas-info@eeas.europa.eu; droi-secretariat@europarl.europa.eu; president@europarl.europa.eu; media@europarl.europa.eu; ec-president@ec.europa.eu; service-spokesperson@ec.europa.eu</div>
+      </div>
+      
+      <div class="btn-group">
+        <button class="btn mobile" onclick="sendMobile('eu')">📱 Open in Mail App</button>
+        <button class="btn web" onclick="sendWeb('eu')">🌐 Gmail Web</button>
+      </div>
+
+      <div class="copy-section">
+        <div class="label">📋 Copy Options:</div>
+        <div class="copy-row">
+          <button class="copy-btn" onclick="copyContent('eu', 'addresses')">📧 Copy Addresses</button>
+          <button class="copy-btn" onclick="copyContent('eu', 'subject')">📌 Copy Subject</button>
+          <button class="copy-btn" onclick="copyContent('eu', 'body')">📄 Copy Full Email</button>
+        </div>
+        <div id="success-eu" style="min-height: 2.5rem;"></div>
+        
+        <div class="label">Subject:</div>
+        <div class="subject-display" id="eu-subject">Formal Appeal to EU Leadership: Supporting Democracy and Human Rights in Iran</div>
+        
+        <div class="label">Email Body:</div>
+        <div class="body-preview" id="eu-body">
+Dear Presidents of the European Commission and Parliament, Distinguished High Representative, and Members of the European Parliament,
+
+In recent weeks, global attention has once again focused on Iran and the aspirations of its people. In January 2026, millions of citizens took to the streets to demand freedom, popular sovereignty, and a better future for their country. Despite severe repression and the tragic loss of thousands of lives, these courageous men and women continue to stand resolutely for liberation and an end to the authoritarian rule of the Islamic Republic. Their message is clear: Iranians seek a democratic system grounded in liberty, the rule of law, and respect for fundamental human rights.
+
+Across Iran and within the global Iranian diaspora, there is growing consensus that the country's future must be determined by its people, anchored in human rights, democratic governance, and the preservation of Iran's territorial integrity. Following the escalation of conflict on 28 February, urgent concerns have arisen regarding civilian safety, the nation's political future, territorial unity, and regional stability.
+
+In this context, the name of Reza Pahlavi has gained prominence across Iran and at protest gatherings worldwide. In recent years, he has emerged as the most widely recognized figure within the Iranian opposition, viewed by millions as a potential unifying leader during a transitional period toward democracy.
+
+Many Iranians, both inside the country and across the diaspora, look to the European Union institutions and its human rights bodies to:
+
+1. Respect the Iranian people's right to determine their political future.
+2. Recognize Reza Pahlavi as a potential transitional leader guiding Iran toward democratic governance.
+3. Protect civilians and prevent further harm amid ongoing conflict.
+4. Support a free, internationally supervised referendum following the Islamic Republic's end, enabling Iranians to choose their system of government.
+5. Uphold human rights and fundamental freedoms.
+6. Preserve Iran's national unity and territorial integrity, discouraging separatism that could destabilize the country and region.
+7. Ensure conditions for Iranians to freely and peacefully decide their nation's future.
+
+Ultimately, Iran's future must be determined by its people through free, democratic, and transparent processes. The international community has a vital role in ensuring that the voices of millions of Iranians seeking freedom, dignity, and democracy are heard and respected.
+
+Respectfully,
+
+[Your Name & Surname – City]
+        </div>
+      </div>
+    </div>
+
+    <!-- HUMAN RIGHTS ORGANIZATIONS -->
+    <div id="page-humanrights" class="page">
+      <div class="country-header">
+        <span class="country-flag">🤝</span>
+        <span class="country-name">Human Rights & European Contacts</span>
+      </div>
+      <div class="recipient-box">
+        <div class="label">📬 Send to:</div>
+        <div class="emails" id="hr-emails">crisisresponse@amnesty.org; press@amnesty.org; hrwpress@hrw.org; emergencies@hrw.org; fidh@fidh.org; press@fidh.org; buergerdialog@auswaertiges-amt.de; public.enquiries@fcdo.gov.uk; courrier.cabinet@diplomatie.gouv.fr</div>
+      </div>
+      
+      <div class="btn-group">
+        <button class="btn mobile" onclick="sendMobile('hr')">📱 Open in Mail App</button>
+        <button class="btn web" onclick="sendWeb('hr')">🌐 Gmail Web</button>
+      </div>
+
+      <div class="copy-section">
+        <div class="label">📋 Copy Options:</div>
+        <div class="copy-row">
+          <button class="copy-btn" onclick="copyContent('hr', 'addresses')">📧 Copy Addresses</button>
+          <button class="copy-btn" onclick="copyContent('hr', 'subject')">📌 Copy Subject</button>
+          <button class="copy-btn" onclick="copyContent('hr', 'body')">📄 Copy Full Email</button>
+        </div>
+        <div id="success-hr" style="min-height: 2.5rem;"></div>
+        
+        <div class="label">Subject:</div>
+        <div class="subject-display" id="hr-subject">Urgent: Human Rights Crisis and the Transition to Democracy in Iran</div>
+        
+        <div class="label">Email Body:</div>
+        <div class="body-preview" id="hr-body">
+Dear Human Rights Defenders, Distinguished Government Representatives, and Esteemed Colleagues,
+
+In recent weeks, global attention has once again focused on Iran and the aspirations of its people. In January 2026, millions of citizens took to the streets to demand freedom, popular sovereignty, and a better future for their country. Despite severe repression and the tragic loss of thousands of lives, these courageous men and women continue to stand resolutely for liberation and an end to the authoritarian rule of the Islamic Republic. Their message is clear: Iranians seek a democratic system grounded in liberty, the rule of law, and respect for fundamental human rights.
+
+Across Iran and within the global Iranian diaspora, there is growing consensus that the country's future must be determined by its people, anchored in human rights, democratic governance, and the preservation of Iran's territorial integrity. Following the escalation of conflict on 28 February, urgent concerns have arisen regarding civilian safety, the nation's political future, territorial unity, and regional stability.
+
+In this context, the name of Reza Pahlavi has gained prominence across Iran and at protest gatherings worldwide. In recent years, he has emerged as the most widely recognized figure within the Iranian opposition, viewed by millions as a potential unifying leader during a transitional period toward democracy.
+
+Many Iranians, both inside the country and across the diaspora, look to Human Rights Organizations, international institutions, and democratic governments to:
+
+1. Respect the Iranian people's right to determine their political future.
+2. Recognize Reza Pahlavi as a potential transitional leader guiding Iran toward democratic governance.
+3. Protect civilians and prevent further harm amid ongoing conflict.
+4. Support a free, internationally supervised referendum following the Islamic Republic's end, enabling Iranians to choose their system of government.
+5. Uphold human rights and fundamental freedoms.
+6. Preserve Iran's national unity and territorial integrity, discouraging separatism that could destabilize the country and region.
+7. Ensure conditions for Iranians to freely and peacefully decide their nation's future.
+
+Ultimately, Iran's future must be determined by its people through free, democratic, and transparent processes. The international community has a vital role in ensuring that the voices of millions of Iranians seeking freedom, dignity, and democracy are heard and respected.
+
+Respectfully,
+
+[Your Name & Surname – City]
+        </div>
+      </div>
+    </div>
+
+    <!-- MEDIA -->
+    <div id="page-media" class="page">
+      <div class="country-header">
+        <span class="country-flag">📺</span>
+        <span class="country-name">International & EU Mainstream Media</span>
+      </div>
+      <div class="recipient-box">
+        <div class="label">📬 Send to:</div>
+        <div class="emails" id="media-emails">tips@reuters.com; comments@cnn.com; newswatch@bbc.co.uk; haveyoursay@bbc.co.uk; guardian.letters@theguardian.co.uk; tips@politico.eu; lefigaro@lefigaro.fr; courrier.international@lemonde.fr; lesoir@lesoir.be; derstandard@derstandard.at; nrc@nrc.nl; volkskrant@volkskrant.nl; politiken@politiken.dk; dn@dn.se; welt@welt.de; faz@faz.de; suddeutsche@sueddeutsche.de; espana@elpais.es; internacional@lavanguardia.es; correspondents@corriere.it</div>
+      </div>
+      
+      <div class="btn-group">
+        <button class="btn mobile" onclick="sendMobile('media')">📱 Open in Mail App</button>
+        <button class="btn web" onclick="sendWeb('media')">🌐 Gmail Web</button>
+      </div>
+
+      <div class="copy-section">
+        <div class="label">📋 Copy Options:</div>
+        <div class="copy-row">
+          <button class="copy-btn" onclick="copyContent('media', 'addresses')">📧 Copy Addresses</button>
+          <button class="copy-btn" onclick="copyContent('media', 'subject')">📌 Copy Subject</button>
+          <button class="copy-btn" onclick="copyContent('media', 'body')">📄 Copy Full Email</button>
+        </div>
+        <div id="success-media" style="min-height: 2.5rem;"></div>
+        
+        <div class="label">Subject:</div>
+        <div class="subject-display" id="media-subject">Press Briefing: The Iranian People's Resistance and the Call for Democratic Transition</div>
+        
+        <div class="label">Email Body:</div>
+        <div class="body-preview" id="media-body">
+Dear Members of the International Media, Correspondents, and Editorial Staff,
+
+In recent weeks, global attention has once again focused on Iran and the aspirations of its people. In January 2026, millions of citizens took to the streets to demand freedom, popular sovereignty, and a better future for their country. Despite severe repression and the tragic loss of thousands of lives, these courageous men and women continue to stand resolutely for liberation and an end to the authoritarian rule of the Islamic Republic. Their message is clear: Iranians seek a democratic system grounded in liberty, the rule of law, and respect for fundamental human rights.
+
+Across Iran and within the global Iranian diaspora, there is growing consensus that the country's future must be determined by its people, anchored in human rights, democratic governance, and the preservation of Iran's territorial integrity. Following the escalation of conflict on 28 February, urgent concerns have arisen regarding civilian safety, the nation's political future, territorial unity, and regional stability.
+
+In this context, the name of Reza Pahlavi has gained prominence across Iran and at protest gatherings worldwide. In recent years, he has emerged as the most widely recognized figure within the Iranian opposition, viewed by millions as a potential unifying leader during a transitional period toward democracy.
+
+Many Iranians, both inside the country and across the diaspora, look to responsible media and international institutions to accurately reflect their demands to:
+
+1. Respect the Iranian people's right to determine their political future.
+2. Recognize Reza Pahlavi as a potential transitional leader guiding Iran toward democratic governance.
+3. Protect civilians and prevent further harm amid ongoing conflict.
+4. Support a free, internationally supervised referendum following the Islamic Republic's end, enabling Iranians to choose their system of government.
+5. Uphold human rights and fundamental freedoms.
+6. Preserve Iran's national unity and territorial integrity, discouraging separatism that could destabilize the country and region.
+7. Ensure conditions for Iranians to freely and peacefully decide their nation's future.
+
+Ultimately, Iran's future must be determined by its people through free, democratic, and transparent processes. The international community has a vital role in ensuring that the voices of millions of Iranians seeking freedom, dignity, and democracy are heard and respected.
+
+Respectfully,
+
+[Your Name & Surname – City]
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      ⚡ Click tabs to switch between 10 destinations • Numbered points (1-7) • Green for mobile • Blue for Gmail
+    </div>
+  </div>
+
+  <script>
+    // Tab switching
+    const tabs = document.querySelectorAll('.tab');
+    const pages = document.querySelectorAll('.page');
+    
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        pages.forEach(p => p.classList.remove('active-page'));
+        
+        tab.classList.add('active');
+        
+        const pageId = 'page-' + tab.getAttribute('data-page');
+        document.getElementById(pageId).classList.add('active-page');
+      });
+    });
+
+    // Email data for all countries
+    const emailData = {
+      germany: {
+        emails: ["buergerdialog@auswaertiges-amt.de", "poststelle@auswaertiges-amt.de", "menschenrechte@auswaertiges-amt.de", "presse@auswaertiges-amt.de"],
+        subject: document.getElementById('germany-subject')?.innerText || '',
+        body: document.getElementById('germany-body')?.innerText || ''
+      },
+      france: {
+        emails: ["ministre@diplomatie.gouv.fr", "presse.dcp@diplomatie.gouv.fr", "courrier.cabinet@diplomatie.gouv.fr", "presse@diplomatie.gouv.fr", "communication.dcp@diplomatie.gouv.fr"],
+        subject: document.getElementById('france-subject')?.innerText || '',
+        body: document.getElementById('france-body')?.innerText || ''
+      },
+      uk: {
+        emails: ["fcdo.enquiries@fcdo.gov.uk", "public.enquiries@fcdo.gov.uk", "fcdo.correspondence@fcdo.gov.uk", "fcdo.press@fcdo.gov.uk"],
+        subject: document.getElementById('uk-subject')?.innerText || '',
+        body: document.getElementById('uk-body')?.innerText || ''
+      },
+      canada: {
+        emails: ["minister@international.gc.ca", "media@international.gc.ca"],
+        subject: document.getElementById('canada-subject')?.innerText || '',
+        body: document.getElementById('canada-body')?.innerText || ''
+      },
+      netherlands: {
+        emails: ["minbuza@minbuza.nl", "info@minbuza.nl", "dmm@minbuza.nl"],
+        subject: document.getElementById('netherlands-subject')?.innerText || '',
+        body: document.getElementById('netherlands-body')?.innerText || ''
+      },
+      sweden: {
+        emails: ["info.ud@gov.se", "registrator@gov.se", "ud.pressoffice@gov.se"],
+        subject: document.getElementById('sweden-subject')?.innerText || '',
+        body: document.getElementById('sweden-body')?.innerText || ''
+      },
+      usa: {
+        emails: ["iran@state.gov", "publicaffairs@state.gov", "pa-dl-media@state.gov"],
+        subject: document.getElementById('usa-subject')?.innerText || '',
+        body: document.getElementById('usa-body')?.innerText || ''
+      },
+      eu: {
+        emails: ["eeas@eeas.europa.eu", "press@eeas.europa.eu", "eeas-info@eeas.europa.eu", "droi-secretariat@europarl.europa.eu", "president@europarl.europa.eu", "media@europarl.europa.eu", "ec-president@ec.europa.eu", "service-spokesperson@ec.europa.eu"],
+        subject: document.getElementById('eu-subject')?.innerText || '',
+        body: document.getElementById('eu-body')?.innerText || ''
+      },
+      hr: {
+        emails: ["crisisresponse@amnesty.org", "press@amnesty.org", "hrwpress@hrw.org", "emergencies@hrw.org", "fidh@fidh.org", "press@fidh.org", "buergerdialog@auswaertiges-amt.de", "public.enquiries@fcdo.gov.uk", "courrier.cabinet@diplomatie.gouv.fr"],
+        subject: document.getElementById('hr-subject')?.innerText || '',
+        body: document.getElementById('hr-body')?.innerText || ''
+      },
+      media: {
+        emails: ["tips@reuters.com", "comments@cnn.com", "newswatch@bbc.co.uk", "haveyoursay@bbc.co.uk", "guardian.letters@theguardian.co.uk", "tips@politico.eu", "lefigaro@lefigaro.fr", "courrier.international@lemonde.fr", "lesoir@lesoir.be", "derstandard@derstandard.at", "nrc@nrc.nl", "volkskrant@volkskrant.nl", "politiken@politiken.dk", "dn@dn.se", "welt@welt.de", "faz@faz.de", "suddeutsche@sueddeutsche.de", "espana@elpais.es", "internacional@lavanguardia.es", "correspondents@corriere.it"],
+        subject: document.getElementById('media-subject')?.innerText || '',
+        body: document.getElementById('media-body')?.innerText || ''
+      }
+    };
+
+    // Refresh data function
+    function refreshData() {
+      emailData.germany.subject = document.getElementById('germany-subject')?.innerText || emailData.germany.subject;
+      emailData.germany.body = document.getElementById('germany-body')?.innerText || emailData.germany.body;
+      emailData.france.subject = document.getElementById('france-subject')?.innerText || emailData.france.subject;
+      emailData.france.body = document.getElementById('france-body')?.innerText || emailData.france.body;
+      emailData.uk.subject = document.getElementById('uk-subject')?.innerText || emailData.uk.subject;
+      emailData.uk.body = document.getElementById('uk-body')?.innerText || emailData.uk.body;
+      emailData.canada.subject = document.getElementById('canada-subject')?.innerText || emailData.canada.subject;
+      emailData.canada.body = document.getElementById('canada-body')?.innerText || emailData.canada.body;
+      emailData.netherlands.subject = document.getElementById('netherlands-subject')?.innerText || emailData.netherlands.subject;
+      emailData.netherlands.body = document.getElementById('netherlands-body')?.innerText || emailData.netherlands.body;
+      emailData.sweden.subject = document.getElementById('sweden-subject')?.innerText || emailData.sweden.subject;
+      emailData.sweden.body = document.getElementById('sweden-body')?.innerText || emailData.sweden.body;
+      emailData.usa.subject = document.getElementById('usa-subject')?.innerText || emailData.usa.subject;
+      emailData.usa.body = document.getElementById('usa-body')?.innerText || emailData.usa.body;
+      emailData.eu.subject = document.getElementById('eu-subject')?.innerText || emailData.eu.subject;
+      emailData.eu.body = document.getElementById('eu-body')?.innerText || emailData.eu.body;
+      emailData.hr.subject = document.getElementById('hr-subject')?.innerText || emailData.hr.subject;
+      emailData.hr.body = document.getElementById('hr-body')?.innerText || emailData.hr.body;
+      emailData.media.subject = document.getElementById('media-subject')?.innerText || emailData.media.subject;
+      emailData.media.body = document.getElementById('media-body')?.innerText || emailData.media.body;
+    }
+
+    // Show success message
+    function showSuccess(page) {
+      const div = document.getElementById(`success-${page}`);
+      if (div) {
+        div.innerHTML = '<div class="success-msg">✓ Copied to clipboard</div>';
+        setTimeout(() => div.innerHTML = '', 2000);
+      }
+    }
+
+    // Mobile send function
+    window.sendMobile = function(page) {
+      refreshData();
+      const data = emailData[page];
+      if (!data) return;
+      
+      const mailtoString = `mailto:${data.emails.join(',')}?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.body)}`;
+      
+      setTimeout(() => {
+        window.location.href = mailtoString;
+      }, 50);
+    };
+
+    // Web send function
+    window.sendWeb = function(page) {
+      refreshData();
+      const data = emailData[page];
+      if (!data) return;
+      
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${data.emails.join(',')}&su=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.body)}`;
+      window.open(gmailUrl, '_blank');
+    };
+
+    // Copy content function
+    window.copyContent = function(page, type) {
+      refreshData();
+      const data = emailData[page];
+      if (!data) return;
+      
+      let textToCopy = '';
+      if (type === 'addresses') {
+        textToCopy = data.emails.join('; ');
+      } else if (type === 'subject') {
+        textToCopy = data.subject;
+      } else if (type === 'body') {
+        textToCopy = data.body;
+      }
+      
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        showSuccess(page);
+      }).catch(() => {
+        alert('Copy failed. Please select and copy manually.');
+      });
+    };
+  </script>
+</body>
+</html>
