@@ -49,6 +49,16 @@
       border-bottom: 1px solid #4a7db0;
       padding-bottom: 1rem;
     }
+    .bcc-note {
+      background: #2a3f5f;
+      color: #ffd966;
+      padding: 0.8rem;
+      border-radius: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      border: 1px solid #5a8fc9;
+    }
     .tab-bar {
       display: flex;
       flex-wrap: wrap;
@@ -283,7 +293,12 @@
 
     <!-- Mobile helper note -->
     <div class="mobile-note">
-      📱 <strong>Mobile:</strong> Tap green button → choose mail app → all addresses will be in "To" field
+      📱 <strong>Mobile:</strong> Tap green button → choose mail app → all addresses will be in BCC to avoid spamming
+    </div>
+
+    <!-- BCC Information -->
+    <div class="bcc-note">
+      📧 <strong>BCC Protection:</strong> All recipients are placed in BCC to protect privacy and prevent reply-all chains
     </div>
 
     <!-- Tab Bar with Flags -->
@@ -307,8 +322,8 @@
         <span class="country-name">Germany – Federal Foreign Office</span>
       </div>
       <div class="recipient-box">
-        <div class="label">📬 Send to:</div>
-        <div class="emails" id="germany-emails">buergerdialog@auswaertiges-amt.de; poststelle@auswaertiges-amt.de; menschenrechte@auswaertiges-amt.de; presse@auswaertiges-amt.de</div>
+        <div class="label">📬 Send to (BCC):</div>
+        <div class="emails" id="germany-emails">poststelle@auswaertiges-amt.de; dialog@diplo.de; presse@diplo.de; buergerservice@diplo.de</div>
       </div>
       
       <div class="btn-group">
@@ -364,8 +379,8 @@ Respectfully,
         <span class="country-name">France – Ministry for Europe and Foreign Affairs</span>
       </div>
       <div class="recipient-box">
-        <div class="label">📬 Send to:</div>
-        <div class="emails" id="france-emails">ministre@diplomatie.gouv.fr; presse.dcp@diplomatie.gouv.fr; courrier.cabinet@diplomatie.gouv.fr; presse@diplomatie.gouv.fr; communication.dcp@diplomatie.gouv.fr</div>
+        <div class="label">📬 Send to (BCC):</div>
+        <div class="emails" id="france-emails">courrier.cabinet@diplomatie.gouv.fr; presse.dcp@diplomatie.gouv.fr; communication.dcp@diplomatie.gouv.fr</div>
       </div>
       
       <div class="btn-group">
@@ -421,8 +436,8 @@ Respectfully,
         <span class="country-name">United Kingdom – Foreign, Commonwealth & Development Office</span>
       </div>
       <div class="recipient-box">
-        <div class="label">📬 Send to:</div>
-        <div class="emails" id="uk-emails">fcdo.enquiries@fcdo.gov.uk; public.enquiries@fcdo.gov.uk; fcdo.correspondence@fcdo.gov.uk; fcdo.press@fcdo.gov.uk</div>
+        <div class="label">📬 Send to (BCC):</div>
+        <div class="emails" id="uk-emails">fcdo.enquiries@fcdo.gov.uk; public.enquiries@fcdo.gov.uk; fcdo.correspondence@fcdo.gov.uk; newsdesk@fcdo.gov.uk</div>
       </div>
       
       <div class="btn-group">
@@ -478,8 +493,8 @@ Respectfully,
         <span class="country-name">Canada – Global Affairs Canada</span>
       </div>
       <div class="recipient-box">
-        <div class="label">📬 Send to:</div>
-        <div class="emails" id="canada-emails">minister@international.gc.ca; media@international.gc.ca</div>
+        <div class="label">📬 Send to (BCC):</div>
+        <div class="emails" id="canada-emails">enquiry@international.gc.ca; media@international.gc.ca</div>
       </div>
       
       <div class="btn-group">
@@ -535,8 +550,8 @@ Respectfully,
         <span class="country-name">Netherlands – Ministry of Foreign Affairs</span>
       </div>
       <div class="recipient-box">
-        <div class="label">📬 Send to:</div>
-        <div class="emails" id="netherlands-emails">minbuza@minbuza.nl; info@minbuza.nl; dmm@minbuza.nl</div>
+        <div class="label">📬 Send to (BCC):</div>
+        <div class="emails" id="netherlands-emails">directievoorlichting@minbuza.nl; communicatie@minbuza.nl; dmm@minbuza.nl; persvragen@minbuza.nl</div>
       </div>
       
       <div class="btn-group">
@@ -592,8 +607,8 @@ Respectfully,
         <span class="country-name">Sweden – Ministry for Foreign Affairs</span>
       </div>
       <div class="recipient-box">
-        <div class="label">📬 Send to:</div>
-        <div class="emails" id="sweden-emails">info.ud@gov.se; registrator@gov.se; ud.pressoffice@gov.se</div>
+        <div class="label">📬 Send to (BCC):</div>
+        <div class="emails" id="sweden-emails">ud.registrator@gov.se; registrator@gov.se; foreign.ministry@gov.se; press@gov.se</div>
       </div>
       
       <div class="btn-group">
@@ -649,8 +664,8 @@ Respectfully,
         <span class="country-name">United States – Department of State</span>
       </div>
       <div class="recipient-box">
-        <div class="label">📬 Send to:</div>
-        <div class="emails" id="usa-emails">iran@state.gov; publicaffairs@state.gov; pa-dl-media@state.gov</div>
+        <div class="label">📬 Send to (BCC):</div>
+        <div class="emails" id="usa-emails">publicaffairs@state.gov; pa-dl-media@state.gov; iran@state.gov</div>
       </div>
       
       <div class="btn-group">
@@ -706,8 +721,13 @@ Respectfully,
         <span class="country-name">European Union Institutions</span>
       </div>
       <div class="recipient-box">
-        <div class="label">📬 Send to:</div>
-        <div class="emails" id="eu-emails">eeas@eeas.europa.eu; press@eeas.europa.eu; eeas-info@eeas.europa.eu; droi-secretariat@europarl.europa.eu; president@europarl.europa.eu; media@europarl.europa.eu; ec-president@ec.europa.eu; service-spokesperson@ec.europa.eu</div>
+        <div class="label">📬 Send to (BCC):</div>
+        <div class="emails" id="eu-emails">
+          <strong>European Commission:</strong> cab-von-der-leyen-contact@ec.europa.eu; eric.mamer@ec.europa.eu; service-spokesperson@ec.europa.eu<br>
+          <strong>European External Action Service:</strong> HR-VP-CABINET@eeas.europa.eu; delegation-press@eeas.europa.eu; data-protection@eeas.europa.eu<br>
+          <strong>European Parliament:</strong> droi-secretariat@europarl.europa.eu; president@europarl.europa.eu; media@europarl.europa.eu<br>
+          <strong>European Commission NL:</strong> comm-nl-den-haag@ec.europa.eu
+        </div>
       </div>
       
       <div class="btn-group">
@@ -760,11 +780,15 @@ Respectfully,
     <div id="page-humanrights" class="page">
       <div class="country-header">
         <span class="country-flag">🤝</span>
-        <span class="country-name">Human Rights & European Contacts</span>
+        <span class="country-name">Human Rights Organizations</span>
       </div>
       <div class="recipient-box">
-        <div class="label">📬 Send to:</div>
-        <div class="emails" id="hr-emails">crisisresponse@amnesty.org; press@amnesty.org; hrwpress@hrw.org; emergencies@hrw.org; fidh@fidh.org; press@fidh.org; buergerdialog@auswaertiges-amt.de; public.enquiries@fcdo.gov.uk; courrier.cabinet@diplomatie.gouv.fr</div>
+        <div class="label">📬 Send to (BCC):</div>
+        <div class="emails" id="hr-emails">
+          <strong>Amnesty International:</strong> press@amnesty.org; crisisresponse@amnesty.org; eio@amnesty.org<br>
+          <strong>Human Rights Watch:</strong> hrwpress@hrw.org; emergencies@hrw.org; netherlands@hrw.org<br>
+          <strong>International Federation for Human Rights:</strong> fidh@fidh.org; press@fidh.org
+        </div>
       </div>
       
       <div class="btn-group">
@@ -817,11 +841,15 @@ Respectfully,
     <div id="page-media" class="page">
       <div class="country-header">
         <span class="country-flag">📺</span>
-        <span class="country-name">International & EU Mainstream Media</span>
+        <span class="country-name">International & Dutch Mainstream Media</span>
       </div>
       <div class="recipient-box">
-        <div class="label">📬 Send to:</div>
-        <div class="emails" id="media-emails">tips@reuters.com; comments@cnn.com; newswatch@bbc.co.uk; haveyoursay@bbc.co.uk; guardian.letters@theguardian.co.uk; tips@politico.eu; lefigaro@lefigaro.fr; courrier.international@lemonde.fr; lesoir@lesoir.be; derstandard@derstandard.at; nrc@nrc.nl; volkskrant@volkskrant.nl; politiken@politiken.dk; dn@dn.se; welt@welt.de; faz@faz.de; suddeutsche@sueddeutsche.de; espana@elpais.es; internacional@lavanguardia.es; correspondents@corriere.it</div>
+        <div class="label">📬 Send to (BCC):</div>
+        <div class="emails" id="media-emails">
+          <strong>Global Media:</strong> tips@reuters.com; tips@ap.org; tips@cnn.com; cnn.tips@cnn.com; newsgathering@bbc.co.uk; world@bbc.co.uk; tips@nytimes.com; international@nytimes.com; tips@washpost.com; international@theguardian.com; guardian.global@theguardian.com; newsroom@politico.eu; tips@politico.com; newsroom@foxnews.com; tips@foxnews.com; letters@economist.com; newsdesk@economist.com<br>
+          <strong>European Media:</strong> hinweise@spiegel.de; redaktion@welt.de; faz@faz.de; courrier@lefigaro.fr; redaktion@derstandard.at; politiken@politiken.dk; dn@dn.se; espana@elpais.es; internacional@lavanguardia.es<br>
+          <strong>Dutch Media:</strong> redactie@nos.nl; redactie@telegraaf.nl; redactie@nrc.nl; redactie@rtl.nl; redactie@volkskrant.nl
+        </div>
       </div>
       
       <div class="btn-group">
@@ -871,7 +899,7 @@ Respectfully,
     </div>
 
     <div class="footer-note">
-      ⚡ Click tabs to switch between 10 destinations • Numbered points (1-7) • Green for mobile • Blue for Gmail
+      ⚡ Click tabs to switch between 10 destinations • Numbered points (1-7) • Green for mobile • Blue for Gmail • All recipients in BCC
     </div>
   </div>
 
@@ -892,55 +920,80 @@ Respectfully,
       });
     });
 
-    // Email data for all countries
+    // Email data for all countries (updated with corrected addresses)
     const emailData = {
       germany: {
-        emails: ["buergerdialog@auswaertiges-amt.de", "poststelle@auswaertiges-amt.de", "menschenrechte@auswaertiges-amt.de", "presse@auswaertiges-amt.de"],
+        emails: ["poststelle@auswaertiges-amt.de", "dialog@diplo.de", "presse@diplo.de", "buergerservice@diplo.de"],
         subject: document.getElementById('germany-subject')?.innerText || '',
         body: document.getElementById('germany-body')?.innerText || ''
       },
       france: {
-        emails: ["ministre@diplomatie.gouv.fr", "presse.dcp@diplomatie.gouv.fr", "courrier.cabinet@diplomatie.gouv.fr", "presse@diplomatie.gouv.fr", "communication.dcp@diplomatie.gouv.fr"],
+        emails: ["courrier.cabinet@diplomatie.gouv.fr", "presse.dcp@diplomatie.gouv.fr", "communication.dcp@diplomatie.gouv.fr"],
         subject: document.getElementById('france-subject')?.innerText || '',
         body: document.getElementById('france-body')?.innerText || ''
       },
       uk: {
-        emails: ["fcdo.enquiries@fcdo.gov.uk", "public.enquiries@fcdo.gov.uk", "fcdo.correspondence@fcdo.gov.uk", "fcdo.press@fcdo.gov.uk"],
+        emails: ["fcdo.enquiries@fcdo.gov.uk", "public.enquiries@fcdo.gov.uk", "fcdo.correspondence@fcdo.gov.uk", "newsdesk@fcdo.gov.uk"],
         subject: document.getElementById('uk-subject')?.innerText || '',
         body: document.getElementById('uk-body')?.innerText || ''
       },
       canada: {
-        emails: ["minister@international.gc.ca", "media@international.gc.ca"],
+        emails: ["enquiry@international.gc.ca", "media@international.gc.ca"],
         subject: document.getElementById('canada-subject')?.innerText || '',
         body: document.getElementById('canada-body')?.innerText || ''
       },
       netherlands: {
-        emails: ["minbuza@minbuza.nl", "info@minbuza.nl", "dmm@minbuza.nl"],
+        emails: ["directievoorlichting@minbuza.nl", "communicatie@minbuza.nl", "dmm@minbuza.nl", "persvragen@minbuza.nl"],
         subject: document.getElementById('netherlands-subject')?.innerText || '',
         body: document.getElementById('netherlands-body')?.innerText || ''
       },
       sweden: {
-        emails: ["info.ud@gov.se", "registrator@gov.se", "ud.pressoffice@gov.se"],
+        emails: ["ud.registrator@gov.se", "registrator@gov.se", "foreign.ministry@gov.se", "press@gov.se"],
         subject: document.getElementById('sweden-subject')?.innerText || '',
         body: document.getElementById('sweden-body')?.innerText || ''
       },
       usa: {
-        emails: ["iran@state.gov", "publicaffairs@state.gov", "pa-dl-media@state.gov"],
+        emails: ["publicaffairs@state.gov", "pa-dl-media@state.gov", "iran@state.gov"],
         subject: document.getElementById('usa-subject')?.innerText || '',
         body: document.getElementById('usa-body')?.innerText || ''
       },
       eu: {
-        emails: ["eeas@eeas.europa.eu", "press@eeas.europa.eu", "eeas-info@eeas.europa.eu", "droi-secretariat@europarl.europa.eu", "president@europarl.europa.eu", "media@europarl.europa.eu", "ec-president@ec.europa.eu", "service-spokesperson@ec.europa.eu"],
+        emails: [
+          "cab-von-der-leyen-contact@ec.europa.eu", "eric.mamer@ec.europa.eu", "service-spokesperson@ec.europa.eu",
+          "HR-VP-CABINET@eeas.europa.eu", "delegation-press@eeas.europa.eu", "data-protection@eeas.europa.eu",
+          "droi-secretariat@europarl.europa.eu", "president@europarl.europa.eu", "media@europarl.europa.eu",
+          "comm-nl-den-haag@ec.europa.eu"
+        ],
         subject: document.getElementById('eu-subject')?.innerText || '',
         body: document.getElementById('eu-body')?.innerText || ''
       },
       hr: {
-        emails: ["crisisresponse@amnesty.org", "press@amnesty.org", "hrwpress@hrw.org", "emergencies@hrw.org", "fidh@fidh.org", "press@fidh.org", "buergerdialog@auswaertiges-amt.de", "public.enquiries@fcdo.gov.uk", "courrier.cabinet@diplomatie.gouv.fr"],
+        emails: [
+          "press@amnesty.org", "crisisresponse@amnesty.org", "eio@amnesty.org",
+          "hrwpress@hrw.org", "emergencies@hrw.org", "netherlands@hrw.org",
+          "fidh@fidh.org", "press@fidh.org"
+        ],
         subject: document.getElementById('hr-subject')?.innerText || '',
         body: document.getElementById('hr-body')?.innerText || ''
       },
       media: {
-        emails: ["tips@reuters.com", "comments@cnn.com", "newswatch@bbc.co.uk", "haveyoursay@bbc.co.uk", "guardian.letters@theguardian.co.uk", "tips@politico.eu", "lefigaro@lefigaro.fr", "courrier.international@lemonde.fr", "lesoir@lesoir.be", "derstandard@derstandard.at", "nrc@nrc.nl", "volkskrant@volkskrant.nl", "politiken@politiken.dk", "dn@dn.se", "welt@welt.de", "faz@faz.de", "suddeutsche@sueddeutsche.de", "espana@elpais.es", "internacional@lavanguardia.es", "correspondents@corriere.it"],
+        emails: [
+          "tips@reuters.com", "tips@ap.org", "tips@cnn.com", "cnn.tips@cnn.com",
+          "newsgathering@bbc.co.uk", "world@bbc.co.uk",
+          "tips@nytimes.com", "international@nytimes.com",
+          "tips@washpost.com",
+          "international@theguardian.com", "guardian.global@theguardian.com",
+          "newsroom@politico.eu", "tips@politico.com",
+          "newsroom@foxnews.com", "tips@foxnews.com",
+          "letters@economist.com", "newsdesk@economist.com",
+          "hinweise@spiegel.de", "redaktion@welt.de", "faz@faz.de",
+          "courrier@lefigaro.fr",
+          "redaktion@derstandard.at",
+          "politiken@politiken.dk",
+          "dn@dn.se",
+          "espana@elpais.es", "internacional@lavanguardia.es",
+          "redactie@nos.nl", "redactie@telegraaf.nl", "redactie@nrc.nl", "redactie@rtl.nl", "redactie@volkskrant.nl"
+        ],
         subject: document.getElementById('media-subject')?.innerText || '',
         body: document.getElementById('media-body')?.innerText || ''
       }
@@ -979,26 +1032,28 @@ Respectfully,
       }
     }
 
-    // Mobile send function
+    // Mobile send function with BCC
     window.sendMobile = function(page) {
       refreshData();
       const data = emailData[page];
       if (!data) return;
       
-      const mailtoString = `mailto:${data.emails.join(',')}?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.body)}`;
+      // Using bcc parameter to place all recipients in BCC
+      const mailtoString = `mailto:?bcc=${encodeURIComponent(data.emails.join(','))}&subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.body)}`;
       
       setTimeout(() => {
         window.location.href = mailtoString;
       }, 50);
     };
 
-    // Web send function
+    // Web send function with BCC (Gmail)
     window.sendWeb = function(page) {
       refreshData();
       const data = emailData[page];
       if (!data) return;
       
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${data.emails.join(',')}&su=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.body)}`;
+      // Gmail uses bcc parameter
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&bcc=${encodeURIComponent(data.emails.join(','))}&su=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.body)}`;
       window.open(gmailUrl, '_blank');
     };
 
